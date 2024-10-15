@@ -11,11 +11,10 @@ function convertToRoman(num) {
 
 	let result = '';
 
-	for (let i = 0; i < obj.length; i++){
-
+	for (let key in obj){
 		while (num >= obj[i].value){
-			result += obj[i].symbol;
-			num -= obj[i].value;
+			result += obj[key];
+			num -= key;
 		}
 	}
 
